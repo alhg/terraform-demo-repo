@@ -1,6 +1,5 @@
 provider "aws" {}
 
-
 resource "aws_security_group" "demo_allow_http_ssh" {
   name        = "demo_allow_http_ssh"
   description = "Allow HTTP and SSH inbound traffic"
@@ -19,6 +18,7 @@ resource "aws_security_group" "demo_allow_http_ssh" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
 data "aws_ami" "ubuntu" {
   most_recent = true
 
